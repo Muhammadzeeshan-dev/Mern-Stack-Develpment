@@ -1,0 +1,216 @@
+<!-- /* ======================= Food Delivery App - FAQ Page ==================== */ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>FAQs - HungerHive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    .faq-header {
+      background: url('hero.png') center/cover no-repeat;
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+    }
+
+    .faq-header h1 {
+      font-size: 2.5em;
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .faq {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .faq h2 {
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    .faq h2::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 1.5em;
+    }
+
+    .faq.active h2::after {
+      content: '-';
+    }
+
+    .faq p {
+      display: none;
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+
+    .faq.active p {
+      display: block;
+    }
+
+    footer {
+      background: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero-1 {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .hero-content-1 {
+      padding: 20px 0;
+    }
+
+    .hero-content-1 h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero-content-1 h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .hero-buttons-1 {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    
+
+    .f-logo img {
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .f-icons img {
+      height: 25px;
+      margin: 0 8px;
+    }
+
+    .copy-right {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .faq-header h1 {
+        font-size: 2em;
+      }
+
+      .faq h2 {
+        font-size: 1em;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+     <a  href ="Food-dilvery.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+ <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>    </nav>
+  </header>
+
+  <main>
+    <section class="faq-header">
+      <h1>FAQs - Food Delivery</h1>
+    </section>
+
+    <div class="faq-container">
+      <div class="faq"><h2>How do I place an order?</h2><p>Browse the menu, add items to your cart, and proceed to checkout. You can track your order after confirmation.</p></div>
+      <div class="faq"><h2>Which areas do you deliver to?</h2><p>We deliver in Lahore, Karachi, Islamabad, and other major cities. Enter your address to check availability.</p></div>
+      <div class="faq"><h2>What are the delivery charges?</h2><p>Charges vary by area and order size. You'll see the exact fee before checkout.</p></div>
+      <div class="faq"><h2>What payment methods are available?</h2><p>We accept Cash on Delivery, Cards, Easypaisa, JazzCash, and Bank Transfers.</p></div>
+      <div class="faq"><h2>Can I cancel or modify my order?</h2><p>You can cancel or modify your order within 5 minutes by contacting support.</p></div>
+      <div class="faq"><h2>What if my order is late or incorrect?</h2><p>Contact support for a resolution or refund if your order is late or wrong.</p></div>
+    </div>
+  </main>
+
+  <footer>
+    <section class="hero-1">
+      <img src="footer.png" class="hero-img" alt="Hero Banner" />
+      <div class="hero-content-1">
+        <h3>Download the App Now</h3>
+        <h2>Available on your favorite store. Start your premium experience now</h2>
+        <div class="hero-buttons-1">
+          <button class="btn btn-playstore">Play Store</button>
+          <button class="btn btn-appstore">App Store</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="f-logo">
+            <a  href ="index.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+      </div>
+      <div class="f-icons">
+        <a href="https://www.linkedin.com/in/muhammad-zeeshan-78678699x/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+        <a href="https://github.com/Muhammadzeeshan-dev" target="_blank"> <i class="fa-brands fa-github"></i> </a>
+      </div>
+      <div class="copy-right">
+        <p>© 2025 HungerHive. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.faq h2').forEach(header => {
+      header.addEventListener('click', () => {
+        const parent = header.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+
+    // Mobile Navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!-- /* ======================= Food Delivery App - Contact Page ==================== */ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+  <title> HungerHive - Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+     <a  href ="Food-dilvery.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+ <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>  
+  </header>
+
+    <body>
+    <div class="container">
+      <div class="c-headings">
+         <h1 >Contact</h1>
+        <span>We love to hear from you</span>
+
+      </div>
+       
+        <section class="contact">
+          <div class="c-part-1">
+          <h2>Get In Touch</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Your Name" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Your Email" id="email" name="email" required>
+            <label for="text">Place</label>
+            <input type="text" placeholder="Enter your Place" id="food" name="food" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>&nbsp;&nbsp;
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="find-us">
+            <h2>Find Us</h2>
+            <p>Address: 6 KM, Main Raiwind Road, Lahore, Punjab, Pakistan</p>
+            <p>Phone: +92-3297676520</p>
+            <p>Email: muhammadzeeshan7864x56@gmail.com</p>
+            <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435519.2274167603!2d74.00472289272936!3d31.483103659918054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1748407936999!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+    </div>
+
+        </section>
+        
+  </main>
+
+  <footer>
+    <section class="hero-1">
+      <img src="footer.png" class="hero-img" alt="Hero Banner" />
+      <div class="hero-content-1">
+        <h3>Download the App Now</h3>
+        <h2>Available on your favorite store. Start your premium experience now</h2>
+        <p>Download the app now</p>
+        <div class="hero-buttons-1">
+          <button class="btn btn-playstore">Play Store</button>
+          <button class="btn btn-appstore">App Store</button>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+        <div class="f-logo">
+                <a  href ="index.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+        </div>
+        <div class="f-icons">
+           <a href="https://www.linkedin.com/in/muhammad-zeeshan-78678699x/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+           <a href="https://github.com/Muhammadzeeshan-dev" target="_blank"> <i class="fa-brands fa-github"></i> </a>
+        </div><br>
+        <div class="copy-right">
+            <p>© 2025 HungerHive. All rights reserved.</p>
+        </div>
+    </section>
+
+    
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

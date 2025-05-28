@@ -1,0 +1,302 @@
+<!-- /* ======================= Food Delivery App - productt Page ==================== */ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>HungerHive | Product Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-image, .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
+
+    .product-info h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #ff5e57;
+      margin: 1rem 0;
+    }
+
+    .order-form {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .order-form input[type="number"] {
+      width: 60px;
+      padding: 6px;
+    }
+
+    .order-form button {
+      padding: 10px 20px;
+      background-color: #ff5e57;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .order-form button:hover {
+      background-color: #e04c44;
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-1 img {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content-1 h3,
+    .hero-content-1 h2,
+    .hero-content-1 p {
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-buttons-1 {
+      margin-top: 1rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      margin: 0 0.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-playstore {
+      background-color: #ff5e57;
+      color: white;
+    }
+
+    .btn-appstore {
+      background-color: tra;
+      color: white;
+    }
+
+    .f-logo img {
+      height: 40px;
+    }
+
+    .f-icons a img {
+      width: 30px;
+      margin: 0 0.5rem;
+    }
+
+    .copy-right p {
+      margin-top: 1rem;
+      color: #777;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+      }
+       .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #faf3f3;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+      .hero-1 {
+        padding: 1rem;
+      }
+
+      .hero-content-1 h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+     <a  href ="index.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+  </div>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+ <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>  </nav>
+</header>
+
+<!-- PRODUCT SECTIONS -->
+<section class="product-container">
+  <div class="product-image">
+    <img src="Cheesy Pepperoni Pizza.jpg" alt="Cheesy Pepperoni Pizza">
+  </div>
+  <div class="product-info">
+    <h2>Cheesy Pepperoni Pizza</h2>
+    <p>🍖 Classic global favorite</p>
+    <p>Toppings: Marinated fajita chicken, bell peppers, onions, jalapeños, mozzarella</p>
+    <p>Flavor: Tangy and spicy</p>
+    <p>Variants: Chicken and beef fajita options available in Pakistan</p>
+    <p class="price">Rs. 799</p>
+    <form class="order-form">
+      <label for="qty1">Qty:</label>
+      <input type="number" id="qty1" name="qty1" value="1" min="1">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+</section>
+
+<section class="product-container">
+  <div class="product-image">
+    <img src="tikka.jpg" alt="Chicken Tikka Pizza">
+  </div>
+  <div class="product-info">
+    <h2>Chicken Tikka Pizza</h2>
+    <p>🔥 Most loved desi-style pizza</p>
+    <p>Toppings: Spicy chicken tikka chunks, onions, capsicum, mozzarella, tomato sauce</p>
+    <p>Flavor: Rich, spicy, and grilled</p>
+    <p>Why it's popular: Combines BBQ flavor with pizza</p>
+    <p class="price">Rs. 999</p>
+    <form class="order-form">
+      <label for="qty2">Qty:</label>
+      <input type="number" id="qty2" name="qty2" value="1" min="1">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+</section>
+
+<section class="product-container">
+  <div class="product-image">
+    <img src="chikken fajita.jpg" alt="Chicken Fajita Pizza">
+  </div>
+  <div class="product-info">
+    <h2>Chicken Fajita Pizza</h2>
+    <p>🌶️ Mexican fusion with a desi twist</p>
+    <p>Toppings: Marinated fajita chicken, bell peppers, onions, jalapeños, mozzarella</p>
+    <p>Flavor: Tangy and spicy</p>
+    <p>Variants: Chicken and beef fajita pizzas</p>
+    <p class="price">Rs. 899</p>
+    <form class="order-form">
+      <label for="qty3">Qty:</label>
+      <input type="number" id="qty3" name="qty3" value="1" min="1">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+</section>
+
+<section class="product-container">
+  <div class="product-image">
+    <img src="mali boti.jpg" alt="Malai Boti Pizza">
+  </div>
+  <div class="product-info">
+    <h2>Malai Boti Pizza</h2>
+    <p>🐔 Desi-flavored creamy pizza</p>
+    <p>Toppings: Malai boti, mozzarella, onions, green chilies, mayo or ranch swirl</p>
+    <p>Flavor: Creamy, mildly spicy, and buttery</p>
+    <p>Why it's popular: Traditional BBQ meets cheesy goodness</p>
+    <p class="price">Rs. 1199</p>
+    <form class="order-form">
+      <label for="qty4">Qty:</label>
+      <input type="number" id="qty4" name="qty4" value="1" min="1">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <section class="hero-1">
+    <img src="footer.png" class="hero-img" alt="Hero Banner" />
+    <div class="hero-content-1">
+      <h3>Download the App Now</h3>
+      <h2>Available on your favorite store. Start your premium experience now</h2>
+      <p>Download the app now</p>
+      <div class="hero-buttons-1">
+        <button class="btn btn-playstore">Play Store</button>
+        <button class="btn btn-appstore">App Store</button>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="f-logo">
+     <a  href ="index.html"> <img  src="logo.png" alt="Food App Logo" /></a>
+    </div>
+    <div class="f-icons">
+      <a href="https://www.linkedin.com/in/muhammad-zeeshan-78678699x/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
+       <a href="https://github.com/Muhammadzeeshan-dev" target="_blank"> <i class="fa-brands fa-github"></i> </a>
+    </div><br>
+    <div class="copy-right">
+      <p>© 2025 HungerHive. All rights reserved.</p>
+    </div>
+  </section>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
