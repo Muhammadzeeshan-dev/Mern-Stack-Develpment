@@ -1,0 +1,771 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,500;1,600&family=Montserrat:wght@600;700&display=swap");
+/* CSS */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+ font-family: "Montserrat", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/***** header *****/ 
+
+header{
+  height: 100vh;
+  width: 100%;
+  background-image: url(/home-images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+nav{
+  display: flex;
+  background-color: transparent;
+  height: 8rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 13rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  & .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    list-style-type: none;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+  }
+  & .nav-links i{
+    display: none;
+    cursor: pointer;
+  }
+  & .links li{
+    cursor: pointer;
+  }
+  & .links li:hover{
+    color: #c50529;
+    border-bottom: #c50529 solid 2px;
+    padding-bottom: 1rem;
+  }
+  & .nav-links i:hover{
+    color: #c50529;
+    border-bottom: #c50529 solid 2px;
+    padding-bottom: 1rem;
+  }
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 9rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 9rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300 !important;
+  font-size: 23px;
+  letter-spacing: 1px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 24px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+    
+ 
+ /***** End hero
+ *****/
+
+
+/***** End header *****/
+
+@media only screen and (min-width: 320px) {
+  /* styles for all devices */
+}
+
+/* default styles for desktop */
+
+
+@media only screen and (max-width: 992px) {
+  /* styles for medium desktop screens */
+  
+  
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: none;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 7.2rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 7.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 1.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 25px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* styles for tablets */
+   
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: block;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 5.2rem;
+    font-weight: 600;
+    color: white;
+    line-height: 0.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
+
+@media only screen and (max-width: 858px) {
+  /* styles for small tablets and large mobile devices */
+   
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: block;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: white;
+    line-height: 0.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 6.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 23px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 30px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
+
+/* iPad-specific styles */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  nav {
+    display: flex;
+    background-color: transparent;
+    height: 12rem; /* adjusted for iPad screen size */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem; /* adjusted for iPad screen size */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    color: white;
+  }
+
+  nav .logo {
+    margin-top: 1rem;
+    font-size: 1.2rem; /* adjusted for iPad screen size */
+  }
+
+  nav .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* adjusted for iPad screen size */
+    list-style-type: none;
+    font-size: 1.5rem; /* adjusted for iPad screen size */
+    font-weight: 600;
+  }
+
+  nav .nav-links i {
+    display: none;
+    font-size: 1.8rem; /* adjusted for iPad screen size */
+    font-weight: 600;
+  }
+
+  .hero {
+    margin-top: 10%; /* adjusted for iPad screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-heading1 {
+    font-size: 5.5rem; /* adjusted for iPad screen size */
+    font-weight: 600;
+    color: white;
+    line-height: 1.4rem;
+    padding-bottom: 2rem; /* adjusted for iPad screen size */
+  }
+
+  .hero span {
+    font-size: 5.5rem; /* adjusted for iPad screen size */
+    font-weight: 600;
+    color: white;
+    margin-top: 1rem; /* adjusted for iPad screen size */
+    padding-bottom: 2rem;
+  }
+
+  .hero-para1 {
+    line-height: 1.4;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600 !important;
+    font-size: 18px; /* adjusted for iPad screen size */
+    letter-spacing: 0.5px;
+    margin-bottom: 2%; /* adjusted for iPad screen size */
+    color: white;
+    text-align: center;
+  }
+
+  .hero-btn {
+    padding: 10px 30px; /* adjusted for iPad screen size */
+    color: white;
+    cursor: pointer;
+    font-weight: bold !important;
+    font-size: 20px; /* adjusted for iPad screen size */
+    border-radius: 5px;
+    background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* styles for small tablets and large mobile devices */
+   
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: block;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 4.2rem;
+    font-weight: 600;
+    color: white;
+    line-height: 0.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+  /* styles for mobile devices */
+   
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: block;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    line-height: 0.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 15px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
+
+@media only screen and (max-width: 320px) {
+  /* styles for small mobile devices */
+
+   
+  nav{
+  display: flex;
+  background-color: transparent;
+  height: 14rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  color: white;
+  padding: 1rem 3rem;
+  & .logo{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & .links{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+  }
+    & .nav-links i{
+      display: block;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+
+
+
+ 
+
+}
+
+/***** hero
+ *****/  
+   .hero{
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .hero-heading1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    line-height: 0.4rem;
+    padding-bottom: 2.5rem;
+   }
+   .hero span{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    padding-bottom: 2.5rem;;
+   }
+   .hero-para1{
+    line-height: 1.4;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600 !important;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3%;
+  color: white;
+  margin-left: 1rem;
+  text-align: center;
+  
+
+   }
+   .hero-btn {
+  padding: 15px 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+}
+
+}
