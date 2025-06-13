@@ -1,0 +1,75 @@
+
+body{
+    background-color: #f7f5f5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    margin-top: 5rem;
+  background:url('https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color:rgba(36, 35, 35, 0.5);
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card img:hover{
+  width: 400px;
+  height: 200px;
+}
+ .card h2{
+  font-size: 26px;
+  color: #0420f7;
+  margin-bottom: 10px;
+ }
+.card h3 {
+  font-size: 24px;
+  color: #151313;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #f7f5f5;
+  margin-bottom: 10px;
+}
+.card button{
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.card button:hover{
+    background-color: green;
+}
