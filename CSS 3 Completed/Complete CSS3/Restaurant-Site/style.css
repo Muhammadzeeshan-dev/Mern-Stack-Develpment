@@ -1,0 +1,179 @@
+
+body{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(bg.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    
+
+
+}
+
+
+.first-nav{
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    & .logo{
+        display: flex;
+        align-items: center;
+        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        & h1{
+            margin-left: 0.3rem;
+
+            color: #26838B;
+            font-size: 2rem;
+        }
+        & i{
+            color: #26838B;
+            font-size: 3rem;
+            margin-left: 1rem;
+        }
+    }
+    & .contact{
+        	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        	        
+        & p{
+            color: #edf3f3;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.navbar{
+    padding: 0rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & ul{
+        list-style: none;
+        display: flex;
+        & li{
+            
+            
+            & a{
+            text-decoration: none;
+}
+        }
+    }
+}
+
+.active1{
+    background-color: #edf3f3;
+            
+            padding: 0.8rem 4rem;
+            text-align: center;
+            color: #26838B;
+            font-size: 1.5rem;
+            -moz-text-decoration-line: ;
+}
+   .active2{
+    background-color: #26838B;
+            
+            padding: 0.8rem 4rem;
+            text-align: center;
+            color: rgb(240, 237, 237);
+            font-size: 1.5rem;
+            -moz-text-decoration-line: ;
+}.active3{
+    background-color: #064c53;
+           
+            padding: 0.8rem 4rem;
+            text-align: center;
+            color: rgb(236, 232, 232);
+            font-size: 1.5rem;
+            -moz-text-decoration-line: ;
+}
+   .active2:hover{
+    background-color: #064c53;
+    color: #edf3f3;
+    transition: 0.5s ease-in-out;
+    
+}
+.active2:hover{
+    background-color: #064c53;
+    color: #edf3f3;
+    transition: 0.5s ease-in-out;
+}
+.active3:hover{
+    background-color: #064c53;
+    color: #edf3f3;
+    transition: 0.5s ease-in-out;
+}
+.hero{
+    margin: 0 10rem;
+    width: 40%;
+
+    & .content{
+        & h1{
+             animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            color: #edf3f3;
+            font-size: 2rem;
+            background-color: #26838B;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+        & p{
+             animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            color: #26838B;
+            display: inline-block;
+            background-color: #edf3f3;
+            padding: 1rem 0.5rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        & button{
+             animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            background-color: #064c53;
+            color: #edf3f3;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            border: none;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+            -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+            opacity: 0;
+            -moz-transform: translateX(1000px);
+            -ms-transform: translateX(1000px);
+            -o-transform: translateX(1000px);
+}
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
