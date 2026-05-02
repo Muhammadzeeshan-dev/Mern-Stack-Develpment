@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart Practice</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f4f6;
+    padding: 15px;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.cart-s {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+button {
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Buttons */
+.add {
+    background: #29ee29;
+    border: none;
+}
+
+.add:hover {
+    background: #1ec71e;
+    transform: scale(1.05);
+}
+
+.wishlist {
+    border: 2px solid black;
+    background: transparent;
+}
+
+.wishlist:hover {
+    background: black;
+    color: white;
+}
+
+.offer {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.offer:hover {
+    background: #0056b3;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .btn-group {
+        flex-direction: row;
+    }
+
+    button {
+        flex: 1;
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .container {
+        max-width: 500px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🛒 Shopping Cart</h2>
+
+    <div class="btn-group">
+
+        <button class="add"
+        onclick="
+        cartCount = cartCount + 1;
+        document.querySelector('.cart-s').innerText =
+        `Your Bag has ${cartCount} Items`;
+        ">
+        Add to Bag
+        </button>
+
+        <button class="wishlist"
+        onclick="
+        if(cartCount > 0){
+            cartCount = cartCount - 1;
+        }
+        document.querySelector('.cart-s').innerText =
+        `Your Bag has ${cartCount} Items`;
+        ">
+        Move to ❤️ Wishlist
+        </button>
+
+        <button class="offer"
+        onclick="
+        cartCount = cartCount + 2;
+        document.querySelector('.cart-s').innerText =
+        `Your Bag has ${cartCount} Items`;
+        ">
+        Add 1+1 Offer
+        </button>
+
+    </div>
+
+    <p>JavaScript practice with inline logic + responsive design</p>
+
+    <h1 class="cart-s">Your Bag has 0 Items</h1>
+</div>
+
+<script>
+let cartCount = 0;
+document.querySelector('.cart-s').innerText =
+`Your Bag has ${cartCount} Items`;
+</script>
+
+</body>
+</html>
