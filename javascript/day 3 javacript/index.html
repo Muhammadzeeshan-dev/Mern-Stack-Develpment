@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            background-color: black;
+            color: grey;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #display {
+            width: 100%;
+            margin-right: 20px;
+            height: 40px;
+            font-size: 30px;
+            text-align: right;
+            margin-bottom: 10px;
+            padding-right: 10px;
+            background-color: transparent;
+            border: none;
+             color: grey;
+        }
+        #display:focus {
+            outline: none;
+        }
+        #display::placeholder {
+            color: grey;
+            font-size: 30px;
+        }
+
+        .buttons button {
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buttons .first {
+            background-color: #A6A6A6;
+            border-radius: 50%;
+            color: black;
+        }
+
+        .buttons .second {
+            background-color: #FF9501;
+            border-radius: 50%;
+        }
+
+        .buttons .third {
+            background-color: #333333;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .buttons .fifth {
+            width: 130px; /* For the '0' button */
+            border-radius: 30px;
+            background-color: #333333;
+            color: white;
+        }
+
+
+        /* 📱 Mobile (default already works, just improve spacing) */
+.container {
+    width: 300px;
+    max-width: 320px;   
+    gap: 10px;
+    padding: 20px;
+    height: 400px;
+}
+
+.buttons button {
+    width: 60px;
+    height: 55px;
+    font-size: 16px;
+    margin: 4px;
+}
+
+/* Make 0 button responsive */
+.buttons .fifth {
+    width: 60px;
+}
+
+/* 📲 Tablet */
+@media (min-width: 600px) {
+    .container {
+        max-width: 380px;
+        padding: 25px;
+    }
+
+    #display {
+        height: 50px;
+        font-size: 32px;
+    }
+
+    .buttons button {
+        height: 65px;
+        font-size: 18px;
+    }
+
+    .buttons .fifth {
+        width: 48%;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width: 900px) {
+    .container {
+        max-width: 420px;
+        padding: 30px;
+    }
+
+    #display {
+        font-size: 36px;
+    }
+
+    .buttons button {
+        height: 60px;
+        font-size: 20px;
+    }
+}
+ </style>
+<body>
+    <h1> Calculator </h1>
+    <div class="container">
+        <input type="text" id="display" placeholder="0" readonly>
+        <br>
+        <div class="buttons">
+            <button class="first"
+                onclick=" currentInput = ''; document.querySelector('#display').value = currentInput; ">AC</button>
+            <button class="first"
+                onclick=" currentInput = currentInput.slice(0, -1); document.querySelector('#display').value = currentInput; ">DEL</button>
+            <button class="first"
+                onclick=" currentInput +=  '%' ; document.querySelector('#display').value = currentInput; ">%</button>
+            <button class="second"
+                onclick=" currentInput +=  '/' ; document.querySelector('#display').value = currentInput; ">/</button>
+            <br>
+            <button class="third"
+                onclick=" currentInput +=  '7' ; document.querySelector('#display').value = currentInput; ">7</button>
+            <button class="third"
+                onclick=" currentInput +=  '8' ; document.querySelector('#display').value = currentInput; ">8</button>
+            <button class="third"
+                onclick=" currentInput +=  '9' ; document.querySelector('#display').value = currentInput; ">9</button>
+            <button class="second"
+                onclick=" currentInput +=  '*' ; document.querySelector('#display').value = currentInput;">*</button>
+            <br>
+            <button class="third"
+                onclick=" currentInput +=  '4' ; document.querySelector('#display').value = currentInput; ">4</button>
+            <button class="third"
+                onclick=" currentInput +=  '5' ; document.querySelector('#display').value = currentInput; ">5</button>
+            <button class="third"
+                onclick=" currentInput +=  '6' ; document.querySelector('#display').value = currentInput; ">6</button>
+            <button class="second"
+                onclick=" currentInput +=  '-' ; document.querySelector('#display').value = currentInput; ">-</button>
+            <br>
+            <button class="third"
+                onclick=" currentInput +=  '1' ; document.querySelector('#display').value = currentInput; ">1</button>
+            <button class="third"
+                onclick=" currentInput +=  '2' ; document.querySelector('#display').value = currentInput; ">2</button>
+            <button class="third"
+                onclick=" currentInput +=  '3' ; document.querySelector('#display').value = currentInput; ">3</button>
+            <button class="second"
+                onclick=" currentInput +=  '+' ; document.querySelector('#display').value = currentInput; ">+</button>
+            <br>
+            <button class="fifth"
+                onclick=" currentInput +=  '0' ; document.querySelector('#display').value = currentInput; ">0</button>
+            <button class="third"
+                onclick=" currentInput +=  '.' ; document.querySelector('#display').value = currentInput; ">.</button>
+            <button class="second"
+             onclick=" let result = eval(document.querySelector('#display').value) ; document.querySelector('#display').value = result; ">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentInput = '';
+        document.querySelector('#display').value = currentInput;
+    </script>
+</body>
+
+</html>
