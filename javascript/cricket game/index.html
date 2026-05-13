@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat · Ball · Stamp Game</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #2c3e2f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .game-box {
+            background: #fef7e0;
+            border-radius: 28px;
+            padding: 30px 25px 35px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+        }
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2rem;
+            color: #3c5e2b;
+        }
+        .sub {
+            color: #7a5a3a;
+            border-bottom: 2px solid #dbb46a;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        .score-board {
+            background: #2b4424;
+            border-radius: 40px;
+            padding: 12px 15px;
+            margin: 20px 0;
+            color: #fff3cf;
+        }
+        .score-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .score-card {
+            background: #fff2df;
+            border-radius: 60px;
+            padding: 6px 20px;
+            min-width: 85px;
+            color: #2d3920;
+            font-weight: bold;
+        }
+        .score-label {
+            font-size: 0.9rem;
+        }
+        .score-number {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #c27e2a;
+        }
+        .result-area {
+            background: #e6dbbc;
+            border-radius: 50px;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e401f;
+            border: 1px solid #cbaa6b;
+        }
+        .buttons {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            margin: 10px 0 15px;
+            flex-wrap: wrap;
+        }
+        .game-btn {
+            background: #e7b45a;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.05s linear;
+            box-shadow: 0 4px 0 #7a501e;
+            color: #2a2410;
+        }
+        .game-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #7a501e;
+        }
+        footer {
+            font-size: 0.75rem;
+            margin-top: 20px;
+            color: #7c613b;
+        }
+    </style>
+</head>
+<body>
+<div class="game-box">
+    <h1>BAT · BALL · STAMP</h1>
+    <div class="sub">pick your move</div>
+
+    <div class="score-board">
+        <div class="score-row">
+            <div class="score-card">
+                <div class="score-label">WINS</div>
+                <div class="score-number" id="winCount">0</div>
+            </div>
+            <div class="score-card">
+                <div class="score-label">LOSSES</div>
+                <div class="score-number" id="lossCount">0</div>
+            </div>
+            <div class="score-card">
+                <div class="score-label">DRAWS</div>
+                <div class="score-number" id="drawCount">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-area" id="resultMessage">
+        Click a button: Bat, Ball or Stamp
+    </div>
+
+    <div class="buttons">
+        <button class="game-btn" id="batBtn">BAT</button>
+        <button class="game-btn" id="ballBtn">BALL</button>
+        <button class="game-btn" id="stampBtn">STAMP</button>
+    </div>
+    <footer>Bat beats Ball | Ball beats Stamp | Stamp beats Bat</footer>
+</div>
+
+<script>
+    const gameScore = {
+        wins: 0,
+        losses: 0,
+        draws: 0
+    };
+
+    function updateScoreUI() {
+        document.getElementById('winCount').innerText = gameScore.wins;
+        document.getElementById('lossCount').innerText = gameScore.losses;
+        document.getElementById('drawCount').innerText = gameScore.draws;
+    }
+
+    // Computer choice: returns "Bat", "Ball", or "Stamp"
+    function getComputerChoice() {
+        const randomNum = Math.floor(Math.random() * 3);  
+        if (randomNum === 0) return "Bat";
+        if (randomNum === 1) return "Ball";
+        return "Stamp";
+    }
+
+    function determineResult(user, computer) {
+        if (user === computer) return "draw";
+        if (
+            (user === "Bat" && computer === "Ball") ||
+            (user === "Ball" && computer === "Stamp") ||
+            (user === "Stamp" && computer === "Bat")
+        ) {
+            return "win";
+        }
+        return "loss";
+    }
+    function updateScoreObject(result) {
+        if (result === "win") {
+            gameScore.wins++;
+        } else if (result === "loss") {
+            gameScore.losses++;
+        } else if (result === "draw") {
+            gameScore.draws++;
+        }
+        updateScoreUI();  
+    }
+    function showGameMessage(userMove, computerMove, resultType) {
+        const resultDiv = document.getElementById("resultMessage");
+        let outcomeText = "";
+        if (resultType === "win") {
+            outcomeText = "YOU WIN !";
+        } else if (resultType === "loss") {
+            outcomeText = "COMPUTER WINS !";
+        } else {
+            outcomeText = "MATCH DRAW !";
+        }
+        resultDiv.innerHTML = `You chose ${userMove}  |  Computer chose ${computerMove}<br><strong>  |   ${outcomeText}</strong>`;
+    }
+    function playRound(userMove) {
+        const computerChoice = getComputerChoice();
+        const result = determineResult(userMove, computerChoice);
+        updateScoreObject(result);
+        showGameMessage(userMove, computerChoice, result);
+    }
+    document.getElementById("batBtn").addEventListener("click", function() {
+        playRound("Bat");
+    });
+    document.getElementById("ballBtn").addEventListener("click", function() {
+        playRound("Ball");
+    });
+    document.getElementById("stampBtn").addEventListener("click", function() {
+        playRound("Stamp");
+    });
+    updateScoreUI();
+</script>
+</body>
+</html>

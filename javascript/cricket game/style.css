@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.halo {
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    border: 2px solid #e40505;
+    width: 50%;
+    margin: 50px auto;
+    & .headings
+    {
+        color: #e40505;
+        text-align: center;
+        padding: 20px;
+    }
+}
