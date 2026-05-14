@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Tic Tac Toe</title>
-
     <style>
         body {
             font-family: Arial;
             text-align: center;
             background: lightgray;
         }
-
         .board {
             width: 330px;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
         }
-
         .box {
             width: 100px;
             height: 100px;
@@ -27,7 +23,6 @@
             line-height: 100px;
             cursor: pointer;
         }
-
         button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -37,32 +32,22 @@
         }
     </style>
 </head>
-
 <body>
-
     <h1>Tic Tac Toe</h1>
-
     <h2 id="msg">Player X Turn</h2>
-
     <div class="board">
-
         <div class="box" onclick="play(0)"></div>
         <div class="box" onclick="play(1)"></div>
         <div class="box" onclick="play(2)"></div>
-
         <div class="box" onclick="play(3)"></div>
         <div class="box" onclick="play(4)"></div>
         <div class="box" onclick="play(5)"></div>
-
         <div class="box" onclick="play(6)"></div>
         <div class="box" onclick="play(7)"></div>
         <div class="box" onclick="play(8)"></div>
-
     </div>
-
     <button onclick="restart()">Restart</button>
     <script>
-
         let turn = "X";
         let gameOver = false;
         let box = document.getElementsByClassName("box");
@@ -79,7 +64,6 @@
                     }
                     msg.innerHTML = "Player " + turn + " Turn";
                 }
-9
             }
         }
         function checkWinner() {
@@ -91,7 +75,6 @@
             ) {
                 win(box[0].innerHTML);
             }
-
             else if (
                 box[3].innerHTML == box[4].innerHTML &&
                 box[4].innerHTML == box[5].innerHTML &&
@@ -99,7 +82,6 @@
             ) {
                 win(box[3].innerHTML);
             }
-
             else if (
                 box[6].innerHTML == box[7].innerHTML &&
                 box[7].innerHTML == box[8].innerHTML &&
@@ -107,7 +89,6 @@
             ) {
                 win(box[6].innerHTML);
             }
-
             else if (
                 box[0].innerHTML == box[3].innerHTML &&
                 box[3].innerHTML == box[6].innerHTML &&
@@ -115,7 +96,6 @@
             ) {
                 win(box[0].innerHTML);
             }
-
             else if (
                 box[1].innerHTML == box[4].innerHTML &&
                 box[4].innerHTML == box[7].innerHTML &&
@@ -123,7 +103,6 @@
             ) {
                 win(box[1].innerHTML);
             }
-
             else if (
                 box[2].innerHTML == box[5].innerHTML &&
                 box[5].innerHTML == box[8].innerHTML &&
@@ -131,7 +110,6 @@
             ) {
                 win(box[2].innerHTML);
             }
-
             else if (
                 box[0].innerHTML == box[4].innerHTML &&
                 box[4].innerHTML == box[8].innerHTML &&
@@ -139,7 +117,6 @@
             ) {
                 win(box[0].innerHTML);
             }
-
             else if (
                 box[2].innerHTML == box[4].innerHTML &&
                 box[4].innerHTML == box[6].innerHTML &&
@@ -147,24 +124,16 @@
             ) {
                 win(box[2].innerHTML);
             }
-
             // DRAW
-
             else {
-
                 let count = 0;
-
                 for (let i = 0; i < 9; i++) {
-
                     if (box[i].innerHTML != "") {
                         count++;
                     }
                 }
-
                 if (count == 9) {
-
                     msg.innerHTML = "Match Draw";
-
                     gameOver = true;
                 }
             }
@@ -174,9 +143,7 @@
             msg.innerHTML = player + " Wins";
             gameOver = true;
         }
-
         // RESTART
-
         function restart() {
             for (let i = 0; i < 9; i++) {
                 box[i].innerHTML = "";
@@ -186,7 +153,6 @@
             msg.innerHTML = "Player X Turn";
         }
     </script>
-
 </body>
 
 </html>
