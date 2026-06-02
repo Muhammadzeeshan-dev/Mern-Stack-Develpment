@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practise exercise</title>
+</head>
+<body>
+  <h3 id = greeting>
+  </h3>    
+    <script>
+          function doGreating(personName = "Guest"){
+  let date = new Date();
+  let hours = date.getHours();
+  let heading = document.getElementById("greeting");
+    if(hours > 5 && hours < 12){
+        heading.innerText = `Good Morning, ${personName}!`;
+    }
+    else if(hours >= 12 && hours < 18){
+        heading.innerText = `Good Afternoon, ${personName}!`;
+    }
+    else{
+        heading.innerText = `Good Evening, ${personName}!`;
+    }
+}
+doGreating("Zeeshan");
+    </script>
+</body>
+</html>
