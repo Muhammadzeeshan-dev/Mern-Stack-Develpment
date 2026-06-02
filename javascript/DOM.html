@@ -5,9 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Practise exercise</title>
 </head>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #greeting{
+        color: green;
+    }
+    #myBtn{
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #myBtn:hover{
+        background-color: darkblue;
+    }
+    
+
+</style>
 <body>
   <h3 id = greeting>
-  </h3>    
+  </h3>
+  <button id = "myBtn" onclick = "incrementCounter();">0</button>
     <script>
           function doGreating(personName = "Guest"){
   let date = new Date();
@@ -24,6 +48,21 @@
     }
 }
 doGreating("Zeeshan");
+let numberofClicks = localStorage.getItem("numberofClicks") || 0;
+function incrementCounter(){
+  let button = document.getElementById("myBtn");
+    numberofClicks++;
+    localStorage.setItem("numberofClicks", numberofClicks);
+    button.innerText = numberofClicks;
+    if (numberofClicks % 2 === 0){
+        button.style.backgroundColor = "blue";
+    }
+    else{
+        button.style.backgroundColor = "green";
+    }
+
+}
+
     </script>
 </body>
 </html>
