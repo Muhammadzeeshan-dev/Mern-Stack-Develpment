@@ -13,7 +13,18 @@
 
 
         <script>
+<<<<<<< HEAD
             
+=======
+            let product = {   
+                name : "T-shirt",
+                price : 19.99,
+                rating : {
+                  stars:  4.5,
+                  noOfReviews: 100
+                },
+            };
+>>>>>>> dd4b12f79e6e60fe07ed4220ce659bd4aea71285
             // console.log(typeof product);
             // let str = JSON.stringify(product);
             // console.log(typeof str);
@@ -22,6 +33,7 @@
             //  console.log(typeof obj);
             //  console.log(obj);
 
+<<<<<<< HEAD
 let product = {   
                 name : "T-shirt",
                 price : 19.99,
@@ -32,6 +44,13 @@ let product = {
             };
 
             localStorage.setItem("product", "leptop");
+=======
+            // localStorage.setItem("Name", "Hallo world");
+            // console.log(localStorage.getItem("Name"));
+            localStorage.setItem("product", JSON.stringify(product));
+           console.log(localStorage.getItem("product"));
+
+>>>>>>> dd4b12f79e6e60fe07ed4220ce659bd4aea71285
 
 
         </script>
