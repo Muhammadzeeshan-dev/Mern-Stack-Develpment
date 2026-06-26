@@ -7,20 +7,81 @@
 </head>
 <body>
 
-
+      <button id="btn">Click me</button>
 
     <script>
+            //  Array Methods
+          let arr = [1, 2, 3, 4, 5];
+         let odds =  arr.filter((num) => {
+            if (num % 2 === 1) {
+             return true;
+            }
+            else {
+                return false;
+            }
+          });
+     
+          alert(odds);
+          
+
+
+
+    // //   For each loop 
+        
+    // let foods = ['Pizza', 'Burger', 'Pasta', 'Sushi'];
+    // foods.forEach((food) => {
+    //     console.log(food);
+    // });
+
+
+        //  // Event listener
+        // const btn = document.getElementById('btn');
+        // btn.addEventListener('click', ('click' , event => {
+        //     alert('Button clicked!');
+        // }))
+         
+        // let printDate = event => {
+        //     alert(`Button clicked! ${new Date()}`);
+        // }
+        // btn.addEventListener('click', printDate);
+        // btn.removeEventListener('click', btn);
+
+
+
+
+
+
+
+
+
+
     //    let sum =  function (num1, num2) {
     //      return num1 + num2;
     // };
 
     // console.log(5, 10);
 
-        let sum =  function (num1, num2,num3 , sumTwoNumbers) {
-          let sumTwoNumbers = function(num1, num2) {
-            return num1 + num2;
-         return num1 + num2;
-    };
+    //     let sum =  function (num1, num2,num3 , sumTwoNumbers) {
+    //       let sumTwoNumbers = function(num1, num2) {
+    //         return num1 + num2;
+    //      return num1 + num2;
+    // };
+    //     }
+
+
+        // let alarm = function() {
+        //     alert(`wake up! ${new Date()}`);
+        // };
+        // // let timer = setTimeout(alarm, 3000);
+        // // console.log(timer);
+
+        // //  clearTimeout(timer);
+        //        setInterval(alarm, 1000);
+        //    let timer = setTimeout(alarm, 3000);
+        //    clearInterval(timer);
+         
+       
+        
 
 
     </script>
